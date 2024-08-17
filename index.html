@@ -1,1 +1,141 @@
-已经收到Kengwang的礼物啦
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(45deg, #3f3d56, #6c63ff);
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        section {
+            width: 80%;
+            max-width: 1000px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background-color: #27293d;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            margin: 0;
+            border-bottom: 2px solid #6c63ff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .project, .skill {
+            margin-bottom: 15px;
+        }
+
+        .project-title, .skill-title {
+            font-size: 1.2em;
+            color: #6c63ff;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #3f3d56;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer a {
+            color: #6c63ff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .anime-bg {
+            background-image: url('https://example.com/your-anime-image.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>你好，我是[你的名字]</h1>
+        <p>计算机科学与技术 | 网络安全 | 二次元爱好者</p>
+    </header>
+
+    <section>
+        <div class="card anime-bg">
+            <h2>个人简介</h2>
+            <p>我是[你的名字]，目前在[你的学校]学习计算机科学与技术。对网络安全充满热情，热爱编程和探索新技术。此外，我也是二次元文化的忠实粉丝。</p>
+        </div>
+
+        <div class="card">
+            <h2>项目经验</h2>
+            <div class="project">
+                <h3 class="project-title">项目名称 1</h3>
+                <p>项目描述：描述你在该项目中的角色和所用技术。</p>
+            </div>
+            <div class="project">
+                <h3 class="project-title">项目名称 2</h3>
+                <p>项目描述：描述你在该项目中的角色和所用技术。</p>
+            </div>
+            <!-- 你可以添加更多项目 -->
+        </div>
+
+        <div class="card">
+            <h2>技能</h2>
+            <div class="skill">
+                <h3 class="skill-title">编程语言</h3>
+                <p>描述你掌握的编程语言，如Python, Java, C++等。</p>
+            </div>
+            <div class="skill">
+                <h3 class="skill-title">网络安全</h3>
+                <p>描述你在网络安全领域的技能和经验。</p>
+            </div>
+            <!-- 你可以添加更多技能 -->
+        </div>
+
+        <div class="card">
+            <h2>联系信息</h2>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/your-github" target="_blank">github.com/your-github</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a></p>
+            <!-- 你可以添加更多联系信息 -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 [你的名字]. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
