@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff; /* 外部背景为白色 */
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,36 +16,37 @@
             justify-content: center;
             color: #333;
         }
-        。container {
+        .container {
             width: 90%;
             max-width: 500px;
-            background-color: #e6f7ff; /* 容器内部背景为浅蓝色 */
+            background-color: #e6f7ff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin: 20px 0; /* 添加一些外边距以使内容在手机上居中 */
+            margin: 20px 0;
         }
-        h1 {
-            color: #d9534f;
-        }
-        h2 {
-            color: #5bc0de;
-        }
-        。content {
+        h1 { color: #d9534f; }
+        h2 { color: #5bc0de; }
+        .content {
             text-align: left;
             margin-top: 20px;
         }
-        。qr-code {
+        .qr-code {
             margin: 20px 0;
             text-align: center;
         }
-        。qr-code img {
+        .qr-code img {
             width: 100%;
-            max-width: 463px; /* 确保二维码不会超过容器的宽度 */
+            max-width: 463px;
             height: auto;
             border: 5px solid #d9534f;
             border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .qr-code img:hover {
+            transform: scale(1.03);
         }
         /* continue…… 动效 */
         .continue {
@@ -58,6 +59,43 @@
             0%, 50%, 100% { opacity: 1; }
             25%, 75% { opacity: 0; }
         }
+        /* 移动端适配 */
+        @media (max-width: 600px) {
+            .qr-code img {
+                max-width: 90%;
+                border-width: 3px;
+            }
+        }
+        /* 弹窗样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            max-width: 90%;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #ff4444;
+        }
     </style>
 </head>
 <body>
@@ -66,7 +104,7 @@
         <h1>网络安全攻防社招新啦！</h1>
         
         <div class="qr-code">
-            <img src="微信图片_20250918103911_901.png" alt="招新群二维码">
+            <img id="qrImage" src="微信图片_20250918103911_901.png" alt="招新群二维码">
         </div>
 
         <div class="content">
@@ -125,6 +163,32 @@
             <h2>天商网安社等你来战！</h2>
         </div>
     </div>
+
+    <!-- 弹窗结构 -->
+    <div id="qrModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        var modal = document.getElementById("qrModal");
+        var img = document.getElementById("qrImage");
+        var modalImg = document.getElementById("modalImg");
+        var span = document.getElementsByClassName("close")[0];
+
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
