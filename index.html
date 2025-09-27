@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网络安全攻防社（天商网安社）招新</title>
-    <style>
-/* 引入字体（国内可访问的 jsDelivr 源） */
-@import url('https://cdn.jsdelivr.net/npm/cn-fontsource-source-han-sans-sc-vf/index.css');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全攻防社（天商网安社）招新</title>
+<style>
+/* 引入科技感字体 Orbitron + 中文 fallback */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
 
 body {
-    font-family: 'Source Han Sans SC VF', sans-serif;
+    font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
@@ -18,6 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #333;
+    line-height: 1.6;
 }
 
 /* 卡片容器 */
@@ -39,8 +41,9 @@ body {
 
 /* 标题炫酷渐变效果 */
 h1 {
+    font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
     font-weight: 700;
-    font-size: 1.8em;
+    font-size: 2em;
     background: linear-gradient(90deg, #ff4b2b, #ff416c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -63,7 +66,11 @@ h2 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 列表样式 */
+/* 列表样式，去掉黑点并保留星星 */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
 ul li {
     margin: 6px 0;
     line-height: 1.5;
@@ -108,7 +115,7 @@ ul li::before {
     color: #d9534f;
     font-weight: bold;
     animation: blink 1.2s infinite;
-    text-align: center;
+    text-align: left;
 }
 @keyframes blink {
     0%, 50%, 100% { opacity: 1; }
@@ -122,76 +129,39 @@ ul li::before {
         border-width: 3px;
     }
 }
-
-/* 弹窗样式 */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: rgba(0,0,0,0.8);
-}
-.modal-content {
-    margin: 5% auto;
-    display: block;
-    max-width: 90%;
-    border-radius: 10px;
-    animation: zoomIn 0.4s ease;
-}
-@keyframes zoomIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-.close {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-.close:hover {
-    color: #ff4444;
-}
-    </style>
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>网络安全攻防社招新啦！</h1>
-        
-        <div class="qr-code">
-            <img id="qrImage" src="微信图片_20250927100512_922_16.jpg" alt="招新群二维码">
-        </div>
+<div class="container">
+    <h1>网络安全攻防社招新啦！</h1>
+    
+    <div class="qr-code">
+        <img id="qrImage" src="微信图片_20250927100512_922_16.jpg" alt="招新群二维码">
+    </div>
 
-        <div class="content">
-            <h2>亲爱的同学们，</h2>
-            <p>你是否对网络安全充满好奇？是否渴望在数字世界中展现你的才华与智慧？那么，不要犹豫，加入我们——网络安全攻防社（天商网安社），一起开启你的网络安全之旅吧！</p>
+    <div class="content">
+        <h2>亲爱的同学们，</h2>
+        <p>你是否对网络安全充满好奇？是否渴望在数字世界中展现你的才华与智慧？那么，不要犹豫，加入我们——网络安全攻防社（天商网安社），一起开启你的网络安全之旅吧！</p>
 
-            <h2>🌟 社团简介：</h2>
-            <p>我们是一个专注于网络安全技术学习与实践的校级社团。在这里，你可以接触到最前沿的网络安全知识，参与各种实战演练和竞赛活动，提升自己的技能水平。同时，我们也是一个充满激情、团结友爱的大家庭，期待每一位热爱网络安全的你加入！</p>
+        <h2>🌟 社团简介：</h2>
+        <p>我们是一个专注于网络安全技术学习与实践的校级社团。在这里，你可以接触到最前沿的网络安全知识，参与各种实战演练和竞赛活动，提升自己的技能水平。同时，我们也是一个充满激情、团结友爱的大家庭，期待每一位热爱网络安全的你加入！</p>
 
-            <h2>🎯 招新对象：</h2>
-            <p>无论你是计算机软件专业的童鞋，还是其他专业对网络安全感兴趣的小白，只要你有一颗热爱学习的心，我们都热烈欢迎你的加入！</p>
+        <h2>🎯 招新对象：</h2>
+        <p>无论你是计算机软件专业的童鞋，还是其他专业对网络安全感兴趣的小白，只要你有一颗热爱学习的心，我们都热烈欢迎你的加入！</p>
 
-            <h2>📚 学习内容：</h2>
-            <ul>
-                <li>网络安全知识基础</li>
-                <li>软件逆向</li>
-                <li>Web渗透</li>
-                <li>二进制漏洞挖掘</li>
-                <li>密码学基础</li>
-                <li>安全杂项</li>
-            </ul>
+        <h2>📚 学习内容：</h2>
+        <ul>
+            <li>网络安全知识基础</li>
+            <li>软件逆向</li>
+            <li>Web渗透</li>
+            <li>二进制漏洞挖掘</li>
+            <li>密码学基础</li>
+            <li>安全杂项</li>
+        </ul>
 
-            <h2>🏆 荣誉成果：</h2>
-            <p>在过去2年的时间里，我们团队取得了多项荣誉成果，参加了一些知名网络安全竞赛（CTF）并取得良好成绩。这些成绩的取得离不开每一位团队成员的努力和付出。我们相信，有你的加入，我们将创造更加辉煌的明天！</p>
+        <h2>🏆 荣誉成果：</h2>
+        <p>在过去2年的时间里，我们团队取得了多项荣誉成果，参加了一些知名网络安全竞赛（CTF）并取得良好成绩。这些成绩的取得离不开每一位团队成员的努力和付出。我们相信，有你的加入，我们将创造更加辉煌的明天！</p>
             <ul>
                 <li>2023年9月，社团成员参加第五届天津市大学生网络安全攻防大赛获得决赛二等奖，实现了我校在网络安全方面奖项0的突破</li>
                 <li>
@@ -208,55 +178,30 @@ ul li::before {
                 <li>2025年3月获全国高校大学生软件创新大赛——软件系统安全区域赛二三等奖</li>
                 <li>2025年5月社团部分成员参加第十六届蓝桥杯网络安全赛道，获得5个一等奖、1个二等奖、1个三等奖</li>
                 <li>2025年7月获全国大学生信息安全与对抗技术竞赛（A类赛事）二等奖三项，三等奖一项</li>
-                <li>2025年9月第四届长城杯网络安全攻防大赛全员晋级决赛（已锁定奖项）</li>
+                <li>2025年9月第四届长城杯网络安全攻防大赛取得决赛优秀奖</li>
                 <li>2025年9月京津冀大学生信息安全网络攻防大赛全员晋级决赛（已锁定奖项）</li>
             </ul>
-            <p class="continue">continue……</p>
 
-            <h2>💡 为什么选择我们？</h2>
-            <ul>
-                <li>天商唯一专注网安的社团</li>
-                <li>丰富的学习资源</li>
-                <li>专业老师指导</li>
-                <li>充满活力的团队氛围</li>
-                <li>为你提供成长的空间</li>
-            </ul>
+        <p class="continue">continue……</p>
 
-            <h2>👫 如何加入？</h2>
-            <p>请扫码进群并关注我们的招新宣讲会，届时将有学长学姐为你详细介绍社团情况并解答你的疑问。</p>
+        <h2>💡 为什么选择我们？</h2>
+        <ul>
+            <li>天商唯一专注网安的社团</li>
+            <li>丰富的学习资源</li>
+            <li>专业老师指导</li>
+            <li>充满活力的团队氛围</li>
+            <li>为你提供成长的空间</li>
+        </ul>
 
-            <h2>🌈 未来展望：</h2>
-            <p>随着数字化时代的到来，网络安全已经成为国家安全和社会稳定的重要保障。作为未来的网络安全守护者，我们将肩负起更多的责任和使命。让我们携手共进，为构建一个更加安全的网络环境而努力奋斗！</p>
+        <h2>👫 如何加入？</h2>
+        <p>请扫码进群并关注我们的招新宣讲会，届时将有学长学姐为你详细介绍社团情况并解答你的疑问。</p>
 
-            <h2>天商网安社等你来战！</h2>
-        </div>
+        <h2>🌈 未来展望：</h2>
+        <p>随着数字化时代的到来，网络安全已经成为国家安全和社会稳定的重要保障。作为未来的网络安全守护者，我们将肩负起更多的责任和使命。让我们携手共进，为构建一个更加安全的网络环境而努力奋斗！</p>
+
+        <h2>天商网安社等你来战！</h2>
     </div>
-
-    <!-- 弹窗结构 -->
-    <div id="qrModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
-
-    <script>
-        var modal = document.getElementById("qrModal");
-        var img = document.getElementById("qrImage");
-        var modalImg = document.getElementById("modalImg");
-        var span = document.getElementsByClassName("close")[0];
-
-        img.onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-        }
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-        modal.onclick = function(e) {
-            if (e.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+</div>
 
 </body>
 </html>
